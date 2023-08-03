@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import Carousel from 'react-bootstrap/Carousel';
 import Rating from '../components/Rating';
 import {
   Row,
@@ -57,7 +58,14 @@ const ProductScreen = () => {
       ) : (
         <Row>
           <Col md={5}>
-            <Image src={product.image} alt={product.name} fluid />
+            <Carousel fade data-bs-theme="dark">
+              <Carousel.Item interval={2000}>
+                <Image src={product.imageSlider[0]} alt={product.name} fluid />
+              </Carousel.Item>
+              <Carousel.Item interval={2000}>
+                <Image src={product.imageSlider[1]} alt={product.name} fluid />
+              </Carousel.Item>
+            </Carousel>
           </Col>
           <Col md={4}>
             <ListGroup variant="flush">

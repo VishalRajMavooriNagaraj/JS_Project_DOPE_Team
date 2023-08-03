@@ -25,6 +25,10 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    imageSlider: {
+      type: Array,
+      required: true,
+    },
     brand: {
       type: String,
       required: true,

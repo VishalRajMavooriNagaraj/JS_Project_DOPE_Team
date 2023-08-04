@@ -50,6 +50,9 @@ const RegisterScreen = () => {
 
   return (
     <FormContainer>
+      <Link to="/" className="btn btn-dark mb-4">
+        Home
+      </Link>
       <h1>Register</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className="my-2" controlId="name">

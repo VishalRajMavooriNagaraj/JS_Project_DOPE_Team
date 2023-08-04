@@ -4,6 +4,8 @@ import Product from '../components/Product';
 import { useGetProductsQuery } from '../slices/productsApiSlice';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
+import { Link, useParams } from 'react-router-dom';
+import Meta from '../components/Meta';
 // import axios from 'axios';
 
 const HomeScreen = () => {
@@ -15,10 +17,15 @@ const HomeScreen = () => {
     };
     fetchProducts();
   }, []);*/
-
-  const { data: products, isLoading, error } = useGetProductsQuery();
+  const { keyword } = useParams();
+  const { data: products, isLoading, error } = useGetProductsQuery({ keyword });
   return (
     <>
+      {keyword && (
+        <Link to="/" className="btn btn-dark mb-4">
+          Go Back
+        </Link>
+      )}
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -27,6 +34,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
+          <Meta />
           <h1>Latest Products</h1>
           <Row>
             {products.map((product) => (

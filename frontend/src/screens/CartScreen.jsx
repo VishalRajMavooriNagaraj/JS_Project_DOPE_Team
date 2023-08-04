@@ -42,6 +42,9 @@ const CartScreen = () => {
           </Message>
         ) : (
           <ListGroup variant="flush">
+            <Link to="/" className="btn btn-dark mb-4">
+              Home
+            </Link>
             {cartItems.map((item) => (
               <ListGroup.Item key={item._id}>
                 <Row>

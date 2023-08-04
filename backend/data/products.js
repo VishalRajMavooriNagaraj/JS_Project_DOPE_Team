@@ -13,6 +13,19 @@ const products = [
     numReviews: 12,
   },
   {
+    name: 'Boult Cosmic R Smart Watch',
+    image: '/images/watch.jpeg',
+    imageSlider: ['/images/watch.jpeg', '/images/watch1.jpeg'],
+    description:
+      '1.3inch Round HD Screen | 475 Nits High Brightness | Upto 10 Days Battery Life | 20 Days Standby | Full Charge in 2 Hrs | Complete Health Monitor: SpO2 Blood Oxygen Saturation Monitor, 24*7 Heart Rate',
+    brand: 'Boult',
+    category: 'Electronics',
+    price: 89.99,
+    countInStock: 10,
+    rating: 4.5,
+    numReviews: 12,
+  },
+  {
     name: 'Iphone 14 Pro Max',
     image: '/images/iphone14promax.jpeg',
     imageSlider: [
@@ -20,7 +33,7 @@ const products = [
       '/images/iphone14promax1.jpeg',
     ],
     description:
-      'Introducing the iPhone 14 Pro Max. Always-On display. A subtle way to stay in the know. A battery that’s all in,all day.',
+      'Introducing the iPhone 14 Pro Max. Always-On display. A subtle way to stay in the know. A battery thatï¿½s all in,all day.',
     brand: 'Apple',
     category: 'Electronics',
     price: 1599.99,

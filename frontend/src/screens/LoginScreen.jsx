@@ -41,6 +41,9 @@ function LoginScreen() {
   };
   return (
     <FormContainer>
+      <Link to="/" className="btn btn-dark mb-4">
+        Home
+      </Link>
       <h1>Sign In</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email" className="my-3">
